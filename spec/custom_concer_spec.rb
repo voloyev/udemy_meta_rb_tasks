@@ -1,7 +1,7 @@
-require 'minitest/autorun'
-require './custom_concern'
+require 'spec_helper'
 
 describe MyyClass do
+
   before do
     @myy_inst  = MyyClass.new
     @myy       = MyyClass

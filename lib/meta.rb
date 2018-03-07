@@ -17,8 +17,8 @@ MyClass = Class.new do
   end
 end
 
-p 'singletons methods'
-p MyClass.methods(false)
+# p 'singletons methods'
+# p MyClass.methods(false)
 
-p 'instance methods'
-p MyClass.instance_methods(false)
+# p 'instance methods'
+# p MyClass.instance_methods(false)

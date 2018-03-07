@@ -1,5 +1,4 @@
-require 'minitest/autorun'
-require './class_tap'
+require 'spec_helper'
 
 describe TestClassTap do
   before do

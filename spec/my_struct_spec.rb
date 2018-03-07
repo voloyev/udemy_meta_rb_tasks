@@ -1,5 +1,4 @@
-require 'minitest/autorun'
-require './my_struct'
+require 'spec_helper'
 
 describe MyStruct do
   NewStruct = MyStruct.new(:id, 'name')

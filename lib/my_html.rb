@@ -10,7 +10,7 @@ class MyHtml
     if block_given?
       instance_eval(&block)
     else
-      @rendered_html << "<#{tag}>#{args.first}</#{tag}>"
+      @rendered_html << "#{args.first}"
     end
 
     @rendered_html << "</#{tag}>"
@@ -21,15 +21,15 @@ class MyHtml
   end
 end
 
-html = MyHtml.new do
-  h2 'Header'
-  code 'Some code'
+# html = MyHtml.new do
+#   h2 'Header'
+#   code 'Some code'
 
-  ul do
-    li 'first in list'
-    li 'second in list'
-    li 'third in list'
-  end
-end
+#   ul do
+#     li 'first in list'
+#     li 'second in list'
+#     li 'third in list'
+#   end
+# end
 
-puts html.render
+# puts html.render

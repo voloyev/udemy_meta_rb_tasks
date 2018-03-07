@@ -21,6 +21,3 @@ class TestClassTap
     'pr'
   end
 end
-
-test = TestClassTap.new
-test.class_tap
