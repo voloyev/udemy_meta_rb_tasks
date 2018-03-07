@@ -5,7 +5,11 @@ class MyHtml
   end
 
   def method_missing(tag, *args, &block)
-    @rendered_html << "<#{tag}>"
+    if args[0].is_a?(Hash)
+      properties = 'aa' #(args.shift.map { |prop| prop.join('=')}) * " "
+    end
+
+    @rendered_html << "<#{tag} #{properties}>"
 
     if block_given?
       instance_eval(&block)
@@ -33,3 +37,6 @@ end
 # end
 
 # puts html.render
+h = MyHtml.new do
+      h1 'Name', class: 'my'
+end.render
