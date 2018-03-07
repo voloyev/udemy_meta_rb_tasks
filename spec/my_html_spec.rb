@@ -12,14 +12,14 @@ describe 'MyHtml helper' do
       li 'first'
     end
 
-    html.must_eq("<ul>Name<li>first</li></ul>")
+    html.must_eq('<ul>Name<li>first</li></ul>')
   end
 
-  # it 'generate tags with attributes' do
-  #   html = MyHtml.new do
-  #     h1 'Name', id: 'my'
-  #   end.render
+  it 'generate tags with attributes' do
+    html = MyHtml.new do
+      h1 'Name', id: 'my', class: "class"
+    end
 
-  #   assert_equal('<h1 id=my>Name</h1>', html)
-  # end
+    assert_equal("<h1 id='my' class='class'>Name</h1>", html.render)
+  end
 end

@@ -1,17 +1,19 @@
-class MyHtml
+class MyHtml < BasicObject
   def initialize(&block)
     @rendered_html = ''
     instance_eval(&block)
   end
 
   def method_missing(tag, *args, &block)
-    if args[0].is_a?(Hash)
-      properties = 'aa' #(args.shift.map { |prop| prop.join('=')}) * " "
+    properties = ""
+
+    if args[1].is_a?(::Object::Hash)
+      properties = args[1].map { |prop, value| "#{prop}='#{value}'"} * ' '
     end
 
     @rendered_html << "<#{tag} #{properties}>"
 
-    if block_given?
+    if block
       instance_eval(&block)
     else
       @rendered_html << "#{args.first}"
