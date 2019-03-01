@@ -12,7 +12,7 @@ describe MyyClass do
   end
 
   it 'should have instance methods' do
-    assert_equal(%i[foo foo=], @myy.instance_methods(false))
+    assert_equal(%i[foo foo=], @myy.instance_methods(false).sort)
   end
 
   it 'should have class_method' do

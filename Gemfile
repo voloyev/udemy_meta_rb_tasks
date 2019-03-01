@@ -9,4 +9,4 @@ gem 'guard'
 gem 'guard-minitest'
 gem 'rb-inotify'
 gem 'minitest'
-# gem "rails"
+gem 'minitest-reporters'
